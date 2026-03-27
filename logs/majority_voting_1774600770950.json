@@ -1,0 +1,29 @@
+{
+  "strategy": "majority_voting",
+  "task": "'machine learning' ifadesini Türkçeye çevir.",
+  "rounds": [
+    {
+      "agent": "Voter-1",
+      "role": "generalist",
+      "message": "[Voter-1] (generalist) Yanıt: 'machine learning' ifadesini Türkçeye çevir."
+    },
+    {
+      "agent": "Voter-2",
+      "role": "generalist",
+      "message": "[Voter-2] (generalist) Yanıt: 'machine learning' ifadesini Türkçeye çevir."
+    },
+    {
+      "agent": "Voter-3",
+      "role": "generalist",
+      "message": "[Voter-3] (generalist) Yanıt: 'machine learning' ifadesini Türkçeye çevir."
+    },
+    {
+      "agent": "VotingSystem",
+      "role": "aggregator",
+      "message": "Seçilen yanıt: [Voter-2] (generalist) Yanıt: 'machine learning' ifadesini Türkçeye çevir."
+    }
+  ],
+  "final_answer": "[Voter-2] (generalist) Yanıt: 'machine learning' ifadesini Türkçeye çevir.",
+  "total_tokens": 39,
+  "elapsed_time_sec": 0.0
+}

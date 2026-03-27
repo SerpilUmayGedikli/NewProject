@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero spring">
+  <h2>Agent Log Merkezi</h2>
+  <p>Tüm mesajları JSON tabanlı olarak izleyin.</p>
+</section>
+<div class="card">
+  <h3>Son 500 Olay</h3>
+  <pre id="logsBox">Yükleniyor...</pre>
+</div>
+<script src="{{ url_for('static', filename='js/logs.js') }}"></script>
+{% endblock %}

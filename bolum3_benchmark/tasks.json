@@ -1,0 +1,17 @@
+[
+  {"task_id": "T1-01", "tier": 1, "prompt": "15 + 27 işlemini hesapla.", "expected_answer": "42", "rubric": null, "domain": "reasoning"},
+  {"task_id": "T1-02", "tier": 1, "prompt": "'machine learning' ifadesini Türkçeye çevir.", "expected_answer": "makine öğrenmesi", "rubric": null, "domain": "analysis"},
+  {"task_id": "T1-03", "tier": 1, "prompt": "Python'da liste uzunluğunu hangi fonksiyon verir?", "expected_answer": "len", "rubric": null, "domain": "coding"},
+
+  {"task_id": "T2-01", "tier": 2, "prompt": "Verilen metni iki cümlede özetle ve duygu tonunu belirt: 'Ekip projeyi erken bitirdi, müşteri çok memnun kaldı.'", "expected_answer": "Pozitif", "rubric": null, "domain": "analysis"},
+  {"task_id": "T2-02", "tier": 2, "prompt": "Basit API tasarımı için endpointler, validasyon ve test planı öner.", "expected_answer": "endpoint", "rubric": null, "domain": "coding"},
+  {"task_id": "T2-03", "tier": 2, "prompt": "Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar.", "expected_answer": "kök neden", "rubric": null, "domain": "reasoning"},
+
+  {"task_id": "T3-01", "tier": 3, "prompt": "Kaynak A 'model %95 doğru', Kaynak B 'model rastgele'. Çelişkiyi değerlendir ve güvenilir sonuca ulaş.", "expected_answer": null, "rubric": {"criteria": ["doğruluk", "gerekçelendirme", "kaynak eleştirisi"]}, "domain": "reasoning"},
+  {"task_id": "T3-02", "tier": 3, "prompt": "Aynı veri için iki zıt trend raporu var. İstatistiksel hata olasılıklarını tartış.", "expected_answer": null, "rubric": {"criteria": ["analitik derinlik", "çelişki çözümü", "tutarlılık"]}, "domain": "analysis"},
+  {"task_id": "T3-03", "tier": 3, "prompt": "Çakışan gereksinimlerle bir yazılım sprint planı üret ve trade-off'ları açıkla.", "expected_answer": null, "rubric": {"criteria": ["önceliklendirme", "risk yönetimi", "açıklık"]}, "domain": "coding"},
+
+  {"task_id": "T4-01", "tier": 4, "prompt": "Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz.", "expected_answer": null, "rubric": {"criteria": ["yaratıcılık", "akış", "tema uyumu"]}, "domain": "creative"},
+  {"task_id": "T4-02", "tier": 4, "prompt": "Bir startup için 'çoklu-ajan platformu neden gerekli?' konusunda ikna edici bir argüman metni yaz.", "expected_answer": null, "rubric": {"criteria": ["ikna gücü", "yapı", "kanıt kullanımı"]}, "domain": "creative"},
+  {"task_id": "T4-03", "tier": 4, "prompt": "NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla.", "expected_answer": null, "rubric": {"criteria": ["etik kapsam", "uygulanabilirlik", "netlik"]}, "domain": "analysis"}
+]

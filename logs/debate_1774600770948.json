@@ -1,0 +1,29 @@
+{
+  "strategy": "debate",
+  "task": "Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar.",
+  "rounds": [
+    {
+      "agent": "Agent-A",
+      "role": "proponent",
+      "message": "[Agent-A] (proponent) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Agent-B",
+      "role": "opponent",
+      "message": "[Agent-B] (opponent) Yanıt: [Agent-A] (proponent) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Agent-A",
+      "role": "proponent",
+      "message": "[Agent-A] (proponent) Yanıt: [Agent-B] (opponent) Yanıt: [Agent-A] (proponent) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Judge",
+      "role": "judge",
+      "message": "[Judge] Karar: Tutarlılık ve doğruluk yüksek cevabı seçiyorum."
+    }
+  ],
+  "final_answer": "[Judge] Karar: Tutarlılık ve doğruluk yüksek cevabı seçiyorum.",
+  "total_tokens": 74,
+  "elapsed_time_sec": 0.0
+}

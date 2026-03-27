@@ -1,0 +1,29 @@
+{
+  "strategy": "majority_voting",
+  "task": "Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar.",
+  "rounds": [
+    {
+      "agent": "Voter-1",
+      "role": "generalist",
+      "message": "[Voter-1] (generalist) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Voter-2",
+      "role": "generalist",
+      "message": "[Voter-2] (generalist) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Voter-3",
+      "role": "generalist",
+      "message": "[Voter-3] (generalist) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "VotingSystem",
+      "role": "aggregator",
+      "message": "Seçilen yanıt: [Voter-1] (generalist) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    }
+  ],
+  "final_answer": "[Voter-1] (generalist) Yanıt: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar.",
+  "total_tokens": 74,
+  "elapsed_time_sec": 0.0
+}

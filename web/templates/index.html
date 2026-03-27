@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero spring">
+  <h2>Bahar Temalı Multi-Agent Orkestrasyon</h2>
+  <p>Birden fazla yapay zekayı paralel başlat, izle, yönet.</p>
+</section>
+
+<section class="controls card">
+  <h3>Görev Başlat</h3>
+  <textarea id="prompt" rows="3">NLP proje planı üret ve görevleri dağıt.</textarea>
+  <button id="startBtn">Paralel Çalıştır</button>
+</section>
+
+<section class="grid-two">
+  <div class="card">
+    <h3>AI Sütunu</h3>
+    <div id="agentColumn" class="agent-column"></div>
+  </div>
+  <div class="card">
+    <h3>Canlı Durum</h3>
+    <pre id="statusBox">Henüz çalıştırılmadı.</pre>
+  </div>
+</section>
+
+<script>
+const DEFAULT_AGENTS = {{ default_agents|tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

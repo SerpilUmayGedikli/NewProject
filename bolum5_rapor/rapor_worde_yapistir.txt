@@ -1,0 +1,79 @@
+LLM Tabanlı Çoklu-Ajan İşbirliği Sistemleri: Tasarım, Uygulama ve Değerlendirme
+
+1) Giriş
+Bu proje, tek ajanlı ve çoklu ajanlı LLM orkestrasyon stratejilerini aynı görev kümesi üzerinde kıyaslamak için geliştirildi. Amaç sadece doğru cevabı üretmek değil; aynı zamanda maliyet, gecikme ve işbirliği verimliliğini birlikte değerlendirmektir. Bu yaklaşım, gerçek dünyadaki ürün geliştirme senaryolarında “hangi strateji hangi görevde daha verimli?” sorusuna pratik bir yanıt vermeyi hedefler.
+
+2) Problem Tanımı ve Motivasyon
+Tek ajanlı sistemler düşük maliyet ve sadelik sunarken, karmaşık görevlerde kalite ve kapsam açısından sınırlı kalabilir. Çoklu ajanlı sistemler ise daha iyi kapsayıcılık ve kalite sağlayabilir; ancak koordinasyon maliyeti, gecikme ve token tüketimi artabilir. Bu nedenle proje kapsamında farklı stratejilerin dengeli şekilde karşılaştırılabileceği mini bir benchmark ve değerlendirme altyapısı kuruldu.
+
+3) Yöntem ve Sistem Tasarımı
+3.1 Taksonomi Modeli
+Sistem, 4 boyutlu bir taksonomi ile modellenmiştir:
+- Topology
+- Communication Protocol
+- Conflict Resolution
+- Task Decomposition
+
+Bu boyutlar Python Enum sınıflarıyla tanımlanmış, Strategy dataclass yapısı ile birleştirilmiştir. Ayrıca en az 5 framework için classify() eşlemesi sağlanmıştır.
+
+3.2 Orkestrasyon Motoru
+Orkestratör, seçilen stratejiye göre ajanları oluşturur ve görevi çalıştırır. Her çalıştırma sonunda final cevap, ajan logları, toplam token ve çalışma süresi kaydedilir. Uygulanan stratejiler:
+- Solo (S1)
+- Solo + Self-Refinement (S1+)
+- Sequential Chain (S3)
+- Hierarchical (S4)
+- Debate (S5)
+- Majority Voting (S6)
+
+3.3 Ajan Simülasyonu
+Bu projede LLM çağrıları simülasyon tabanlı yürütülmüştür. Böylece dış API bağımlılığı olmadan tekrar üretilebilir deney ortamı sağlanmıştır.
+
+4) Benchmark Tasarımı
+Toplam 12 görev hazırlanmıştır. Her zorluk seviyesinde en az 3 görev olacak şekilde dağıtılmıştır:
+- T1 (Atomik)
+- T2 (Bileşik)
+- T3 (Çelişkili)
+- T4 (Yaratıcı)
+
+Görev formatında task_id, tier, prompt, expected_answer/rubric ve domain alanları kullanılmıştır. Benchmark runner, tüm görevleri tüm stratejiler üzerinde çalıştırıp JSON ve CSV olarak sonuç üretir.
+
+5) Değerlendirme Metrikleri
+Aşağıdaki metrikler hesaplanmıştır:
+- TSR (Task Success Rate)
+- TE (Token Expenditure)
+- WCL (Wall-Clock Latency)
+- OQS (Output Quality Score)
+- CEI (Collaboration Efficiency Index)
+
+CEI formülü:
+CEI = w1*TSR_norm + w2*OQS_norm − w3*TE_norm − w4*WCL_norm
+
+Üç ağırlık profili değerlendirilmiştir:
+- Dengeli: w1=w2=w3=w4=0.25
+- Kalite odaklı: w1=0.4, w2=0.3, w3=0.15, w4=0.15
+- Maliyet odaklı: w1=0.2, w2=0.2, w3=0.3, w4=0.3
+
+Ayrıca başarı başına maliyet metriği hesaplanmıştır:
+Cost_per_success = (Total_tokens × Price_per_token) / Number_of_successes
+
+6) Bulgular
+- Dengeli CEI senaryosunda Solo ve Sequential Chain yüksek verimlilik göstermiştir.
+- Kalite odaklı profilde Hierarchical yaklaşım daha iyi sonuç üretmiştir.
+- Maliyet odaklı profilde Solo stratejisi öne çıkmıştır.
+- Debate yaklaşımı T3 tipi çelişkili görevlerde kalite avantajı sunmuş; ancak token ve latency maliyeti artmıştır.
+
+7) Tartışma
+Görev tipi ile strateji uyumu kritik bir etkendir. Basit görevlerde tek ajanlı yöntemler yeterli olurken, karmaşık görevlerde çoklu ajanlı koordinasyon kaliteyi artırır. Ancak bu kalite artışı her zaman maliyet etkin değildir. Dolayısıyla üretim ortamlarında “tek doğru strateji” yerine “görev türüne göre dinamik strateji seçimi” önerilir.
+
+8) Pratik Öneriler
+- Hız ve düşük maliyet gerekiyorsa: Solo
+- Adım adım mühendislik ve dönüşüm görevleri için: Sequential Chain
+- Çelişkili kaynak sentezi ve eleştirel kıyaslama için: Debate
+- Yaratıcı ve kapsamlı çıktı için: Hierarchical
+- Gerçek ürün senaryolarında: görev sınıflandırması + dinamik strateji yönlendirme
+
+9) Sonuç
+Bu proje, çoklu ajan sistemlerinin avantajlarını ve maliyetlerini aynı çatı altında ölçülebilir hale getirmiştir. Sonuçlar, strateji seçiminin görev tipine bağlı olarak değişmesi gerektiğini göstermektedir. En verimli yaklaşım, görevin niteliğine göre strateji değiştiren hibrit bir orkestrasyon modelidir.
+
+10) AI Kullanım Beyanı
+Bu projede kod iskeleti, dokümantasyon taslağı ve arayüz prototipleme süreçlerinde AI destekli araçlardan yararlanılmıştır. Nihai düzenleme, doğrulama, test ve raporlaştırma adımları manuel olarak tamamlanmıştır.

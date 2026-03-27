@@ -1,0 +1,14 @@
+{
+  "strategy": "solo",
+  "task": "15 + 27 işlemini hesapla.",
+  "rounds": [
+    {
+      "agent": "Solo",
+      "role": "generalist",
+      "message": "[Solo] (generalist) Yanıt: 15 + 27 işlemini hesapla."
+    }
+  ],
+  "final_answer": "[Solo] (generalist) Yanıt: 15 + 27 işlemini hesapla.",
+  "total_tokens": 13,
+  "elapsed_time_sec": 0.0
+}
