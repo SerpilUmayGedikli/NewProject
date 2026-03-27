@@ -1,0 +1,29 @@
+{
+  "strategy": "majority_voting",
+  "task": "Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz.",
+  "rounds": [
+    {
+      "agent": "Voter-1",
+      "role": "generalist",
+      "message": "[Voter-1] (generalist) Yanıt: Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz."
+    },
+    {
+      "agent": "Voter-2",
+      "role": "generalist",
+      "message": "[Voter-2] (generalist) Yanıt: Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz."
+    },
+    {
+      "agent": "Voter-3",
+      "role": "generalist",
+      "message": "[Voter-3] (generalist) Yanıt: Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz."
+    },
+    {
+      "agent": "VotingSystem",
+      "role": "aggregator",
+      "message": "Seçilen yanıt: [Voter-3] (generalist) Yanıt: Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz."
+    }
+  ],
+  "final_answer": "[Voter-3] (generalist) Yanıt: Bahar temalı, yapay zekâ ajanlarının birlikte çalıştığı kısa bir hikâye yaz.",
+  "total_tokens": 69,
+  "elapsed_time_sec": 0.0
+}

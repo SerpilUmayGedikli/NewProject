@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero spring">
+  <h2>Analitik & Grafikler</h2>
+  <p>Token, çalıştırma ve gecikme metriklerini görselleştir.</p>
+</section>
+<div class="grid-two">
+  <div class="card"><canvas id="runsChart"></canvas></div>
+  <div class="card"><canvas id="tokensChart"></canvas></div>
+</div>
+<div class="card"><canvas id="latencyChart"></canvas></div>
+<script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+  "strategy": "sequential_chain",
+  "task": "Çakışan gereksinimlerle bir yazılım sprint planı üret ve trade-off'ları açıkla.",
+  "rounds": [
+    {
+      "agent": "Analyst",
+      "role": "planner",
+      "message": "[Analyst] Plan: 1) Analiz et 2) Çözüm üret 3) Kontrol et. Görev: Çakışan gereksinimlerle bir yazılım sprint planı üret ve trade-off'ları açıkla."
+    },
+    {
+      "agent": "Solver",
+      "role": "coder",
+      "message": "[Solver] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir."
+    },
+    {
+      "agent": "Reviewer",
+      "role": "critic",
+      "message": "[Reviewer] Eleştiri: Varsayımları doğrula, uç durumları ele al. İncelenen içerik: [Solver] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir."
+    }
+  ],
+  "final_answer": "[Reviewer] Eleştiri: Varsayımları doğrula, uç durumları ele al. İncelenen içerik: [Solver] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir.",
+  "total_tokens": 60,
+  "elapsed_time_sec": 0.0
+}

@@ -1,0 +1,29 @@
+{
+  "strategy": "hierarchical",
+  "task": "Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar.",
+  "rounds": [
+    {
+      "agent": "Lead",
+      "role": "planner",
+      "message": "[Lead] Plan: 1) Analiz et 2) Çözüm üret 3) Kontrol et. Görev: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Worker-A",
+      "role": "coder",
+      "message": "[Worker-A] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir."
+    },
+    {
+      "agent": "Worker-B",
+      "role": "critic",
+      "message": "[Worker-B] Eleştiri: Varsayımları doğrula, uç durumları ele al. İncelenen içerik: [Lead] Plan: 1) Analiz et 2) Çözüm üret 3) Kontrol et. Görev: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar."
+    },
+    {
+      "agent": "Lead",
+      "role": "planner",
+      "message": "[Worker-A] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir. | [Worker-B] Eleştiri: Varsayımları doğrula, uç durumları ele al. İncelenen içerik: [Lead] Plan: 1) Analiz et 2) Çözüm üret 3) Kontrol et. Görev: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar. | Final synthesis by Lead"
+    }
+  ],
+  "final_answer": "[Worker-A] Kod önerisi: modüler fonksiyonlar ve testlenebilir yapı önerilir. | [Worker-B] Eleştiri: Varsayımları doğrula, uç durumları ele al. İncelenen içerik: [Lead] Plan: 1) Analiz et 2) Çözüm üret 3) Kontrol et. Görev: Bir e-ticaret sepet hatasının olası kök nedenlerini sırala ve debug planı çıkar. | Final synthesis by Lead",
+  "total_tokens": 128,
+  "elapsed_time_sec": 0.0
+}

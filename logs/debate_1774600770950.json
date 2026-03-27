@@ -1,0 +1,29 @@
+{
+  "strategy": "debate",
+  "task": "NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla.",
+  "rounds": [
+    {
+      "agent": "Agent-A",
+      "role": "proponent",
+      "message": "[Agent-A] (proponent) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "Agent-B",
+      "role": "opponent",
+      "message": "[Agent-B] (opponent) Yanıt: [Agent-A] (proponent) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "Agent-A",
+      "role": "proponent",
+      "message": "[Agent-A] (proponent) Yanıt: [Agent-B] (opponent) Yanıt: [Agent-A] (proponent) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "Judge",
+      "role": "judge",
+      "message": "[Judge] Karar: Tutarlılık ve doğruluk yüksek cevabı seçiyorum."
+    }
+  ],
+  "final_answer": "[Judge] Karar: Tutarlılık ve doğruluk yüksek cevabı seçiyorum.",
+  "total_tokens": 62,
+  "elapsed_time_sec": 0.0
+}

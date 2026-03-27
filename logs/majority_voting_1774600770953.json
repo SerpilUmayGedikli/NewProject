@@ -1,0 +1,29 @@
+{
+  "strategy": "majority_voting",
+  "task": "NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla.",
+  "rounds": [
+    {
+      "agent": "Voter-1",
+      "role": "generalist",
+      "message": "[Voter-1] (generalist) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "Voter-2",
+      "role": "generalist",
+      "message": "[Voter-2] (generalist) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "Voter-3",
+      "role": "generalist",
+      "message": "[Voter-3] (generalist) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    },
+    {
+      "agent": "VotingSystem",
+      "role": "aggregator",
+      "message": "Seçilen yanıt: [Voter-2] (generalist) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla."
+    }
+  ],
+  "final_answer": "[Voter-2] (generalist) Yanıt: NLP öğrencileri için etik AI kullanım rehberi taslağı hazırla.",
+  "total_tokens": 59,
+  "elapsed_time_sec": 0.0
+}

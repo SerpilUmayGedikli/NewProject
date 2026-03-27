@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr"><head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Antigravity Bayterek Garden</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+<header class="topbar"><h1>🌸 Antigravity Bayterek Garden</h1><nav><a href="/">Panel</a><a href="/logs">Loglar</a><a href="/analytics">Grafikler</a></nav></header>
+<main>
+<section class="hero spring"><h2>🌿 Paralel Çoklu Sohbet Orkestrasyonu</h2><p>Birden fazla yapay zeka sohbetini alt alta aç ve hepsini eşzamanlı çalıştır.</p></section>
+<section class="controls card"><h3>Genel Görev Başlat</h3><textarea id="prompt" rows="3">NLP proje planı üret ve görevleri dağıt.</textarea><button id="startBtn">Paralel Çalıştır</button></section>
+<section class="card"><h3>🌼 Hoca Test Modu</h3><ol><li><code>python -m bolum3_benchmark.benchmark_runner</code></li><li><code>python -m bolum4_degerlendirme.metrics</code></li><li><code>python -m py_compile $(rg --files -g '*.py')</code></li></ol><p>Bu adımları tamamladıktan sonra raporlama kısmına geçebiliriz.</p></section>
+<section class="grid-two"><div class="card"><h3>Çiçek Sütunu: Yapay Zekalar</h3><div id="agentColumn" class="agent-column"></div></div><div class="card"><h3>Canlı Durum</h3><pre id="statusBox">Henüz çalıştırılmadı.</pre></div></section>
+
+<section class="card">
+  <h3>🌺 Paralel Sohbet Pencereleri</h3>
+  <div class="chat-toolbar">
+    <select id="agentSelect">
+      <option value="claude">Claude</option>
+      <option value="chatgpt">ChatGPT</option>
+      <option value="gemini">Gemini</option>
+    </select>
+    <input id="chatTitle" placeholder="Sohbet başlığı" />
+    <button id="newChatBtn">Yeni Sohbet Aç</button>
+  </div>
+  <div id="chatStack" class="chat-stack"></div>
+</section>
+</main>
+<script src="/static/js/dashboard.js"></script>
+</body></html>
